@@ -1,0 +1,225 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product{
+    flex: 0 0 auto;
+    width: 300px;
+    height: 350px;
+    /* margin: 0 15px 8px 0; */
+    background-color: rgb(237, 237, 237);
+    border-radius: 20px;
+    box-shadow: 9px 8px 9px 0px rgba(186,186,186,0.75);
+    -webkit-box-shadow: 9px 8px 9px 0px rgba(186,186,186,0.75);
+    -moz-box-shadow: 9px 8px 9px 0px rgba(186,186,186,0.75);
+}
+
+.img{
+    position: relative;
+    width: 300px;
+    height: 250px;
+    overflow: hidden;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img span{
+    position: absolute;
+    background-color: aliceblue;
+    color: brown;
+    left: 8px;
+    top: 8px;
+    border-radius: 8px;
+    font-size: 0.5rem;
+    text-transform: capitalize;
+    padding: 5px;
+}
+
+.img .second-span{
+    top: 35px;
+}
+
+.img button{
+    padding: 8px;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.5s;
+    background-color: rgb(226, 226, 226);
+    position: absolute;
+    opacity: 0;
+}
+.product:hover button{
+    opacity: 1;
+}
+
+.detail{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.detail h2, .detail p, .review{
+    margin: 0;
+    padding-left: 15px;
+    padding-bottom: 3px;
+    text-transform: capitalize;
+    align-items: center;
+}
+
+.detail h2{
+    font-weight: bold;
+}
+
+.detail p{
+    opacity: 0.7;
+    font-size: 0.9rem;
+}
+
+.detail .review span{
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+
+.view{ 
+    width: 500px;
+    max-width: 80%;
+    position: fixed;
+    z-index: 10;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+}
+
+.view.active{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.view-header{
+    padding: 10px 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid lightgray;
+}
+
+.view-header .title{
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.view-header .close-btn{
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.view-body{
+    padding: 10px 8px;  
+    display: flex;
+    justify-content: space-between;
+}
+
+.view-body .img{
+    width: 200px;
+    height: 250px;
+}
+
+.view-body .img img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.description{
+    width: 50%;
+    align-items: center;
+    padding-bottom: 8px;
+}
+
+.description h2{
+    font-size: 0.9rem;
+    font-weight: lighter;
+}
+
+.description h3{
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.description h4{
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.description h5{
+    font-size: 0.7rem;
+}
+.description p{
+    font-size: 0.6rem;
+    margin-top: -5px;
+    padding: 0;
+}
+.description button{
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    width: 100%;
+    padding: 5px 0;
+    background-color: rgb(112, 112, 112);
+    border-radius: 3px;
+    color: whitesmoke;
+}
+
+.description button:hover{
+    background-color: rgb(176, 176, 176);
+}
+
+#overlay{
+    position: fixed;
+    background-color: rgba(0, 0, 0, .5);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: 200ms ease-in-out;
+    pointer-events: none;
+    opacity: 0;
+}
+
+#overlay.active{
+    pointer-events: all;
+    opacity: 1;
+}

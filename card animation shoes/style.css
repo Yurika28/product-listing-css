@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
+
+.box {
+    height: 600px;
+    width: 500px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    overflow: hidden;
+    position: relative;
+}
+
+.img img {
+    width: 100%;
+    border-radius: 10px;
+    mix-blend-mode: multiply;
+    transform: scale(1.2);
+    transition: transform 0.3s;
+}
+
+.box:hover img{
+    transform: rotate(30deg) scale(0.9) translateY(-30px);
+}
+
+.detail {
+    text-align: center;
+}
+
+.detail h1{
+    text-transform: uppercase;
+    margin-top: 0;
+    transition: transform 0.5s;   
+}
+
+.box:hover h1{
+    transform: translateY(-60px);
+    transition: transform 0.5s;
+}
+
+.size {
+    margin-top: 0;
+    display: flex;
+    justify-content: space-around;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: transform 0.5s;
+}
+
+.size > h2{
+    font-size: 1rem;
+    font-weight: lighter;
+    color: whitesmoke;
+    letter-spacing: 2px;
+    padding: 15px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    margin: 8px;
+    text-align: center;
+    background-color: rgb(171, 166, 166);
+    cursor: pointer;
+}
+
+.buy {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: gold;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.box:hover .size {
+    opacity: 1;
+    transform: translateY(-30px);
+}
+
+.box:hover .buy {
+    opacity: 1;
+    transform: translateY(0);
+}
