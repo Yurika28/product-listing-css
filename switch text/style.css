@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400..700&family=Anton&family=Encode+Sans+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Solway:wght@300;400;500;700;800&display=swap');
+
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    padding: 20px;
+    border-radius: 30px;
+    background-color: aliceblue;
+}
+
+
+.toggle{
+    color: rgb(124, 124, 124);
+    font-family: "Poppins", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    height: 60px;
+    padding: 20px;
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    border-radius: 10px;
+
+}
+
+.toggle p{
+    margin-top: -1px;
+}
+.switch{
+    overflow: hidden;
+    position: relative;
+}
+
+.switch::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        aliceblue 10%,
+        transparent 10%,
+        transparent 90%,
+        aliceblue 90%
+    );
+    z-index: 2; 
+    padding: 10px 0;   
+}
+
+.word{
+    display: block;
+    height: 100%;
+    padding-left: 10px;
+    color: salmon;
+    animation: change 4s infinite;
+}
+
+@keyframes change{
+    10%{
+        -webkit-transform: translateY(-104%);
+        transform:  translateY(-104%) ;
+    }
+    20%{
+        -webkit-transform: translateY(-100%);
+        transform:  translateY(-100%) ;
+    }
+    30%{
+        -webkit-transform: translateY(-204%);
+        transform:  translateY(-204%) ;
+    }
+    40%{
+        -webkit-transform: translateY(-200%);
+        transform:  translateY(-200%) ;
+    }
+    50%{
+        -webkit-transform: translateY(-304%);
+        transform:  translateY(-304%) ;
+    }
+    60%{
+        -webkit-transform: translateY(-300%);
+        transform:  translateY(-300%) ;
+    }
+    70%{
+        -webkit-transform: translateY(-404%);
+        transform:  translateY(-404%) ;
+    }
+    80%{
+        -webkit-transform: translateY(-400%);
+        transform:  translateY(-400%) ;
+    }
+    90%{
+        -webkit-transform: translateY(-504%);
+        transform:  translateY(-504%) ;
+    }
+    100%{
+        -webkit-transform: translateY(-500%);
+        transform:  translateY(-500%) ;
+    }
+}
